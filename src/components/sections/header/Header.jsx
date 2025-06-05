@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Smartphone } from 'lucide-react';
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';  
+import { motion } from 'framer-motion';
 import { Button } from '../../ui/button';
 
 const Header = () => {
@@ -28,9 +28,8 @@ const Header = () => {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'glass-effect' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'glass-effect' : 'bg-transparent'
+        }`}
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
