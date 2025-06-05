@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "./components/sections/header/Header"
 import Hero from "./components/sections/hero/Hero"
+import Services from "./components/sections/services/Services"
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Services />
       </main>
     </div>
 
