@@ -38,7 +38,7 @@ const Header = () => {
             className="flex items-center space-x-2"
           >
             <Smartphone className="h-8 w-8 text-[var(--color-1)]" />
-            <span className="text-2xl font-bold gradient-text">TechFix</span>
+            <a className="text-2xl font-bold gradient-text" href="#home">TechFix</a>
           </motion.div>
 
           {/* Desktop Navigation */}
