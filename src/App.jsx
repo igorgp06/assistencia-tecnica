@@ -3,6 +3,7 @@ import Header from "./components/sections/header/Header"
 import Hero from "./components/sections/hero/Hero"
 import Services from "./components/sections/services/Services"
 import About from "./components/sections/about/About"
+import Contact from "./components/sections/contact/Contact"
 
 function App() {
   return (
@@ -12,10 +13,11 @@ function App() {
         <Hero />
         <Services />
         <About />
+        <Contact />
       </main>
     </div>
 
-    
+
   )
 }
 
