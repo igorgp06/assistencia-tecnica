@@ -1,6 +1,6 @@
 import { Navbar } from "./components/sections/header/Navbar"
 import { Hero } from "./components/sections/hero/Hero"
-import Services from "./components/sections/services/Services"
+import { Services } from "./components/sections/services/Services"
 import About from "./components/sections/about/About"
 import Contact from "./components/sections/contact/Contact"
 import Footer from "./components/sections/footer/Footer"

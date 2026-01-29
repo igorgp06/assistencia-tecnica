@@ -8,7 +8,6 @@ export const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
           <div className="space-y-6 text-center md:text-left">
-
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="gradient-text">Reparo</span>{" "}
               <br />
@@ -24,16 +23,14 @@ export const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
               <Button
                 size="lg"
-                className="bg-[var(--color-1)] hover:bg-[var(--color-2)] text-white pulse-glow"
-              >
+                className="bg-[var(--color-1)] hover:bg-[var(--color-2)] text-white pulse-glow">
                 <Phone className="mr-2 h-5 w-5" />
                 Solicitar Orçamento
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-[var(--color-1)] text-[var(--color-1)] hover:bg-[var(--color-1)] hover:text-white"
-              >
+                className="border-[var(--color-1)] text-[var(--color-1)] hover:bg-[var(--color-1)] hover:text-white">
                 Ver Serviços
               </Button>
             </div>

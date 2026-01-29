@@ -42,51 +42,48 @@ body {
   overflow-x: hidden;
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, var(--color-1), var(--color-2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.glass-effect {
-  background: rgba(166, 3, 17, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(166, 3, 17, 0.2);
-}
-
-.glow-effect {
-  box-shadow: 0 0 20px rgba(166, 3, 17, 0.3);
-}
-
-.floating-animation {
-  animation: float 6s ease-in-out infinite;
-}
-
 @layer utilities {
   .container {
     margin-inline: auto;
     padding-inline: 1rem;
 
     @media (width >=640px) {
-        max-width: 640px;
+      max-width: 640px;
     }
 
     @media (width >=768px) {
-        max-width: 768px;
+      max-width: 768px;
     }
 
     @media (width >=1024px) {
-        max-width: 1024px;
+      max-width: 1024px;
     }
 
     @media (width >=1280px) {
-        max-width: 1280px;
+      max-width: 1280px;
     }
 
     @media (width >=1500px) {
-        max-width: 1500px;
+      max-width: 1500px;
     }
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(166, 3, 17, 0.3);
+    scale: 1.02;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--color-1), var(--color-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-effect {
+    background: rgba(166, 3, 17, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(166, 3, 17, 0.2);
   }
 }
 
