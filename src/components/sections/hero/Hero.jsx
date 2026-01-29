@@ -1,7 +1,5 @@
 
 import React, { useRef } from 'react';
-// eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei';
 import { Button } from '../../ui/button';
@@ -43,9 +41,9 @@ const Hero = () => {
         </Canvas>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -81,31 +79,31 @@ const Hero = () => {
             </div>
 
             <div className="grid grid-cols-3 gap-6">
-              <motion.div
+              <div
                 whileHover={{ scale: 1.05 }}
                 className="text-center"
               >
                 <Shield className="h-8 w-8 text-[var(--color-1)] mx-auto mb-2" />
                 <p className="text-sm text-gray-300">Garantia</p>
-              </motion.div>
-              <motion.div
+              </div>
+              <div
                 whileHover={{ scale: 1.05 }}
                 className="text-center"
               >
                 <Zap className="h-8 w-8 text-[var(--color-1)] mx-auto mb-2" />
                 <p className="text-sm text-gray-300">Rapidez</p>
-              </motion.div>
-              <motion.div
+              </div>
+              <div
                 whileHover={{ scale: 1.05 }}
                 className="text-center"
               >
                 <Phone className="h-8 w-8 text-[var(--color-1)] mx-auto mb-2" />
                 <p className="text-sm text-gray-300">Qualidade</p>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -117,7 +115,7 @@ const Hero = () => {
                 className="w-full h-auto rounded-2xl glow-effect"
                 src="https://images.unsplash.com/photo-1658212662417-a2a76efe25df" />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

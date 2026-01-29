@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Smartphone, Battery, Shield, Wrench, Cpu, Camera } from 'lucide-react';
 
 const Services = () => {
@@ -40,7 +39,7 @@ const Services = () => {
   return (
     <section id="services" className="py-20 relative">
       <div className="container mx-auto px-6">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -52,11 +51,11 @@ const Services = () => {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Oferecemos soluções completas para todos os tipos de problemas em smartphones
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={index}
               initial={{ opacity: 0, y: 35 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -71,11 +70,11 @@ const Services = () => {
                 <h3 className="text-3xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-200 mb-6">{service.description}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -94,9 +93,9 @@ const Services = () => {
               <span className="font-bold">✓ Atendimento Rápido</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </section>
+    </section >
   );
 };
 

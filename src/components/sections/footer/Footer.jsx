@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Smartphone, Phone, Mail, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
 
 const Footer = () => {
@@ -30,8 +29,7 @@ const Footer = () => {
         <footer className="bg-[var(--color-5)] border-t border-[var(--color-3)]">
             <div className="container mx-auto px-6 py-16">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {/* Brand Section */}
-                    <motion.div
+                    <div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
@@ -46,7 +44,7 @@ const Footer = () => {
                         </p>
                         <div className="flex space-x-4">
                             {socialLinks.map((social, index) => (
-                                <motion.a
+                                <a
                                     key={index}
                                     href={social.href}
                                     whileHover={{ scale: 1.1 }}
@@ -54,13 +52,13 @@ const Footer = () => {
                                     aria-label={social.label}
                                 >
                                     <social.icon className="h-5 w-5" />
-                                </motion.a>
+                                </a>
                             ))}
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Quick Links */}
-                    <motion.div
+                    <div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
@@ -78,10 +76,10 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
-                    </motion.div>
+                    </div>
 
                     {/* Services */}
-                    <motion.div
+                    <div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
@@ -94,10 +92,10 @@ const Footer = () => {
                                 </li>
                             ))}
                         </ul>
-                    </motion.div>
+                    </div>
 
                     {/* Contact Info */}
-                    <motion.div
+                    <div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
@@ -120,12 +118,13 @@ const Footer = () => {
                                 </span>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
 
                 {/* Bottom Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                <div
+                    initial={{ opacity: 0, y: 30 }
+                    }
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="border-t border-[var(--color-3)] mt-12 pt-8"
@@ -143,9 +142,9 @@ const Footer = () => {
                             </a>
                         </div>
                     </div>
-                </motion.div>
-            </div>
-        </footer>
+                </div >
+            </div >
+        </footer >
     );
 };
 

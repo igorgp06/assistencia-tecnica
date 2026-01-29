@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Award, Users, Clock, Star } from 'lucide-react';
 
 const About = () => {
@@ -15,7 +14,7 @@ const About = () => {
     <section id="about" className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -60,9 +59,9 @@ const About = () => {
                 <span className="text-white">Atendimento rápido e eficiente</span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -72,17 +71,17 @@ const About = () => {
               alt="Oficina moderna de reparo de celulares com equipamentos profissionais"
               className="w-full h-auto rounded-2xl glow-effect"
               src="https://images.unsplash.com/photo-1588515603068-adb330f26e92" />
-          </motion.div>
+          </div>
         </div>
 
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-20"
         >
           {stats.map((stat, index) => (
-            <motion.div
+            <div
               key={index}
               whileHover={{ scale: 1.05 }}
               className="text-center glass-effect rounded-2xl p-6"
@@ -92,11 +91,11 @@ const About = () => {
               </div>
               <div className="text-3xl font-bold gradient-text mb-2">{stat.number}</div>
               <div className="text-gray-300 text-sm">{stat.label}</div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
-    </section>
+    </section >
   );
 };
 

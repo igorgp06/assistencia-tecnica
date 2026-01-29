@@ -1,5 +1,5 @@
 import React from "react"
-import Header from "./components/sections/header/Header"
+import { Navbar } from "./components/sections/header/Navbar"
 import Hero from "./components/sections/hero/Hero"
 import Services from "./components/sections/services/Services"
 import About from "./components/sections/about/About"
@@ -9,19 +9,19 @@ import { Toaster } from "./components/ui/toaster"
 
 function App() {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-[var(--color-5)] via-[var(--color-4)] to-[var(--color-3)] scroll-smooth'>
-      <Header />
+    <div className='bg-gradient-to-br min-h-screen from-[var(--color-5)] via-[var(--color-4)] to-[var(--color-3)] scroll-smooth'>
+      <Navbar />
+
       <main>
         <Hero />
         <Services />
         <About />
         <Contact />
       </main>
+
       <Footer />
       <Toaster />
     </div>
-
-
   )
 }
 

@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import { Button } from '../../ui/button';
 import { toast } from '../../ui/use-toast';
@@ -71,7 +70,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 relative">
       <div className="container mx-auto px-6">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -83,10 +82,10 @@ const Contact = () => {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Solicite seu orçamento gratuito ou tire suas dúvidas conosco
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
-          <motion.div
+          <div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -95,7 +94,7 @@ const Contact = () => {
 
             <div className="space-y-6">
               {contactInfo.map((item, index) => (
-                <motion.a
+                <a
                   key={index}
                   href={item.link}
                   whileHover={{ scale: 1.02 }}
@@ -108,11 +107,11 @@ const Contact = () => {
                     <h4 className="text-white font-semibold">{item.title}</h4>
                     <p className="text-gray-300">{item.info}</p>
                   </div>
-                </motion.a>
+                </a>
               ))}
             </div>
 
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -122,10 +121,10 @@ const Contact = () => {
                 alt="Localização da loja TechFix no mapa"
                 className="w-full h-64 object-cover rounded-2xl glow-effect"
                 src="https://images.unsplash.com/photo-1649756797615-daf753c6f4f5" />
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -223,10 +222,10 @@ const Contact = () => {
                 Enviar Solicitação
               </Button>
             </form>
-          </motion.div>
+          </div>
         </div>
-      </div>
-    </section>
+      </div >
+    </section >
   );
 };
 
