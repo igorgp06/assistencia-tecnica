@@ -1,67 +1,27 @@
-
-import React, { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei';
 import { Button } from '../../ui/button';
 import { Phone, Shield, Zap } from 'lucide-react';
 
-const AnimatedSphere = () => {
-  const meshRef = useRef();
-
-  useFrame((state) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x = state.clock.elapsedTime * 0.2;
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.3;
-    }
-  });
-
+export const Hero = () => {
   return (
-    <Sphere ref={meshRef} args={[1, 100, 200]} scale={2}>
-      <MeshDistortMaterial
-        color="#A60311"
-        attach="material"
-        distort={0.3}
-        speed={1.5}
-        roughness={0}
-      />
-    </Sphere>
-  );
-};
+    <section id="home" className="p-24 px-4 relative min-h-screen flex items-center">
+      <div className="container max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-const Hero = () => {
-  return (
-    <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
-      {/* 3D Background */}
-      <div className="absolute inset-0 opacity-30">
-        <Canvas>
-          <ambientLight intensity={0.5} />
-          <pointLight position={[10, 10, 10]} />
-          <AnimatedSphere />
-          <OrbitControls enableZoom={false} enablePan={false} />
-        </Canvas>
-      </div>
+          <div className="space-y-6 text-center md:text-left">
 
-      <div className="container mx-auto px-6 z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6">
-              <span className="gradient-text">Reparo</span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <span className="gradient-text">Reparo</span>{" "}
               <br />
-              <span className="text-white">Profissional</span>
-              <br />
-              <span className="text-white">de Celulares</span>
+              <span className="text-white">Profissional</span>{" "}
+              <span className="gradient-text">de Celulares</span>{" "}
             </h1>
 
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-300">
               Especialistas em conserto de smartphones com garantia e qualidade.
               Diagnóstico gratuito e orçamento sem compromisso.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
               <Button
                 size="lg"
                 className="bg-[var(--color-1)] hover:bg-[var(--color-2)] text-white pulse-glow"
@@ -78,37 +38,23 @@ const Hero = () => {
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-6">
-              <div
-                whileHover={{ scale: 1.05 }}
-                className="text-center"
-              >
+            <div className="grid grid-cols-3 justify-items-center md:justify-items-start gap-2 mt-10 md:grid-cols-3">
+              <div className="text-center">
                 <Shield className="h-8 w-8 text-[var(--color-1)] mx-auto mb-2" />
                 <p className="text-sm text-gray-300">Garantia</p>
               </div>
-              <div
-                whileHover={{ scale: 1.05 }}
-                className="text-center"
-              >
+              <div className="text-center">
                 <Zap className="h-8 w-8 text-[var(--color-1)] mx-auto mb-2" />
                 <p className="text-sm text-gray-300">Rapidez</p>
               </div>
-              <div
-                whileHover={{ scale: 1.05 }}
-                className="text-center"
-              >
+              <div className="text-center">
                 <Phone className="h-8 w-8 text-[var(--color-1)] mx-auto mb-2" />
                 <p className="text-sm text-gray-300">Qualidade</p>
               </div>
             </div>
           </div>
 
-          <div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
+          <div className="flex justify-center lg:justify-end">
             <div className="floating-animation">
               <img
                 alt="Técnico reparando smartphone com ferramentas profissionais"
@@ -118,12 +64,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute top-20 right-20 w-32 h-32 bg-[var(--color-1)] rounded-full opacity-10 blur-xl"></div>
-      <div className="absolute bottom-20 left-20 w-24 h-24 bg-[var(--color-2)] rounded-full opacity-10 blur-xl"></div>
     </section>
   );
 };
-
-export default Hero;
