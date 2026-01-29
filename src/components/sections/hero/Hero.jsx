@@ -23,14 +23,28 @@ export const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
               <Button
                 size="lg"
-                className="bg-[var(--color-1)] hover:bg-[var(--color-2)] text-white pulse-glow">
+                className="bg-[var(--color-1)] hover:bg-[var(--color-2)] text-white pulse-glow"
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 <Phone className="mr-2 h-5 w-5" />
                 Solicitar Orçamento
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-[var(--color-1)] text-[var(--color-1)] hover:bg-[var(--color-1)] hover:text-white">
+                className="border-[var(--color-1)] text-[var(--color-1)] hover:bg-[var(--color-1)] hover:text-white"
+                onClick={() => {
+                  const servicesSection = document.getElementById('services');
+                  if (servicesSection) {
+                    servicesSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 Ver Serviços
               </Button>
             </div>
