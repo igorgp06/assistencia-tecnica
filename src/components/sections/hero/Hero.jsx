@@ -55,7 +55,7 @@ export const Hero = () => {
             <div className="floating-animation">
               <img
                 alt="Técnico reparando smartphone com ferramentas profissionais"
-                className="w-full h-auto rounded-2xl glow-effect"
+                className="w-full h-auto rounded-2xl glow-effect hover:img-animation transition-all duration-300"
                 src="https://images.unsplash.com/photo-1658212662417-a2a76efe25df" />
             </div>
           </div>
