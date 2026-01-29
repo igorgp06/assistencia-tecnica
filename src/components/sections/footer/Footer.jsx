@@ -1,8 +1,6 @@
-
-import React from 'react';
 import { Smartphone, Phone, Mail, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
 
-const Footer = () => {
+export const Footer = () => {
     const socialLinks = [
         { icon: Instagram, href: '#', label: 'Instagram' },
         { icon: Facebook, href: '#', label: 'Facebook' },
@@ -57,7 +55,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Quick Links */}
+                    {/* links rapidos */}
                     <div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +76,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Services */}
+                    {/* serviços */}
                     <div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +92,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Contact Info */}
+                    {/* contato */}
                     <div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -121,7 +119,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Bottom Section */}
+                {/* seção inferior */}
                 <div
                     initial={{ opacity: 0, y: 30 }
                     }
@@ -131,7 +129,11 @@ const Footer = () => {
                 >
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <p className="text-gray-400 text-sm">
-                            © 2025 <a href="https://igdeveloper.com.br" target='_blank'>Igor Gonçalves | DEV & igorgp06</a>. Todos os direitos reservados.
+                            &copy;{new Date().getFullYear()}{" "}
+                            <a href="https://igdeveloper.com.br" target='_blank' rel="noopener noreferrer" className="hover:text-[var(--color-1)] transition-colors">
+                            Igor Gonçalves | DEV
+                            </a>. <br />
+                            Todos os direitos reservados.
                         </p>
                         <div className="flex space-x-6 mt-4 md:mt-0">
                             <a href="#" className="text-gray-400 hover:text-[var(--color-1)] text-sm transition-colors">
@@ -147,5 +149,3 @@ const Footer = () => {
         </footer >
     );
 };
-
-export default Footer;

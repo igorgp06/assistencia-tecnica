@@ -1,10 +1,9 @@
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import { Button } from '../../ui/button';
 import { toast } from '../../ui/use-toast';
 
-const Contact = () => {
+export const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,7 +16,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Simulate form submission
+    // simulação
     toast({
       title: "Mensagem enviada!",
       description: "Entraremos em contato em breve para agendar seu atendimento.",
@@ -61,21 +60,16 @@ const Contact = () => {
     },
     {
       icon: Clock,
-      title: 'Horário',
-      info: 'Seg-Sex: 8h-18h | Sáb: 8h-14h',
+      title: 'Horários',
+      info: 'Seg-Sex: 9h-18h | Sáb: 8h-12h',
       link: '#'
     }
   ];
 
   return (
-    <section id="contact" className="py-20 relative">
-      <div className="container mx-auto px-6">
-        <div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+    <section id="contact" className="py-24 px-4 relative">
+      <div className="container mx-auto max-w-5xl">
+        <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             <span className="gradient-text">Entre em Contato</span>
           </h2>
@@ -85,19 +79,14 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
-          <div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h3 className="text-2xl font-bold text-white mb-8">Informações de Contato</h3>
+          <div className="space-y-8">
+            <h3 className="text-2xl font-bold text-center lg:text-start text-white mb-8">Informações de Contato</h3>
 
             <div className="space-y-6">
               {contactInfo.map((item, index) => (
                 <a
                   key={index}
                   href={item.link}
-                  whileHover={{ scale: 1.02 }}
                   className="flex items-center space-x-4 glass-effect rounded-xl p-4 hover:glow-effect transition-all duration-300"
                 >
                   <div className="flex-shrink-0 w-12 h-12 bg-[var(--color-1)] rounded-full flex items-center justify-center">
@@ -111,24 +100,15 @@ const Contact = () => {
               ))}
             </div>
 
-            <div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="mt-12"
-            >
+            <div className="mt-12">
               <img
-                alt="Localização da loja TechFix no mapa"
-                className="w-full h-64 object-cover rounded-2xl glow-effect"
+                alt="Foto da vitrine da TechFix"
+                className="w-full h-64 object-cover rounded-2xl glow-effect hover:img-animation transition-all duration-300"
                 src="https://images.unsplash.com/photo-1649756797615-daf753c6f4f5" />
             </div>
           </div>
 
-          <div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <div>
             <form onSubmit={handleSubmit} className="glass-effect rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Solicitar Orçamento</h3>
 
@@ -228,5 +208,3 @@ const Contact = () => {
     </section >
   );
 };
-
-export default Contact;
